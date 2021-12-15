@@ -85,7 +85,7 @@ namespace Acme.BookStore.EntityFrameworkCore
                 b.ToTable(BookStoreConsts.DbTablePrefix + "Books", BookStoreConsts.DbSchema);
                 // ConfigureByConvention() 方法优雅的配置/映射继承的属性，应始终对你的所有实体使用它
                 b.ConfigureByConvention(); //auto configure for the base class props 自动配置基类道具
-                b.Property(x => x.Name).IsRequired().HasMaxLength(128);
+                b.Property(x => x.Name).IsRequired().HasMaxLength(BookStoreConsts.MaxNameLength);
                 //...
             });
         }

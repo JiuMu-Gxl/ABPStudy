@@ -20,7 +20,7 @@ using Volo.Abp.Domain.Entities.Auditing;
 
 namespace Acme.BookStore.Books
 {
-    public class Book : AuditedEntity<Guid>
+    public class Book : FullAuditedEntity<Guid>
     {
         /// <summary>
         /// 书籍名称
